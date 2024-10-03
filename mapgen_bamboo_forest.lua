@@ -272,7 +272,7 @@ minetest.set_gen_notify({ decoration = true }, { d_everness_bamboo_forest_large_
 Everness:add_to_queue_on_generated({
     name = 'everness:bamboo_forest',
     can_run = function(biomemap)
-        return biomap and table.indexof(biomemap, biome_id_bamboo_forest) ~= -1
+        return table.indexof(biomemap, biome_id_bamboo_forest) ~= -1
     end,
     on_data = function(minp, maxp, area, data, p2data, gennotify, rand, shared_args)
         --

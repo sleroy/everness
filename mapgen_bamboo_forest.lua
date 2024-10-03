@@ -85,15 +85,15 @@ elseif minetest.get_modpath('mcl_core') then
     jungle_log_schem = {
         size = { x = 3, y = 3, z = 1 },
         data = {
-            { name = 'air', prob = 0 },
-            { name = 'air', prob = 0 },
-            { name = 'air', prob = 0 },
-            { name = 'mcl_core:jungletree', param2 = 12 },
-            { name = 'mcl_core:jungletree', param2 = 12 },
-            { name = 'mcl_core:jungletree', param2 = 12, prob = 127 },
-            { name = 'air', prob = 0 },
+            { name = 'air',                          prob = 0 },
+            { name = 'air',                          prob = 0 },
+            { name = 'air',                          prob = 0 },
+            { name = 'mcl_core:jungletree',          param2 = 12 },
+            { name = 'mcl_core:jungletree',          param2 = 12 },
+            { name = 'mcl_core:jungletree',          param2 = 12, prob = 127 },
+            { name = 'air',                          prob = 0 },
             { name = 'mcl_mushrooms:mushroom_brown', prob = 50 },
-            { name = 'air', prob = 0 },
+            { name = 'air',                          prob = 0 },
         },
     }
 end
@@ -272,7 +272,7 @@ minetest.set_gen_notify({ decoration = true }, { d_everness_bamboo_forest_large_
 Everness:add_to_queue_on_generated({
     name = 'everness:bamboo_forest',
     can_run = function(biomemap)
-        return table.indexof(biomemap, biome_id_bamboo_forest) ~= -1
+        return biomap and table.indexof(biomemap, biome_id_bamboo_forest) ~= -1
     end,
     on_data = function(minp, maxp, area, data, p2data, gennotify, rand, shared_args)
         --
@@ -405,7 +405,8 @@ Everness:add_to_queue_on_generated({
                         'place_center_x, place_center_z'
                     )
 
-                    shared_args.schem_positions.everness_japanese_shrine = shared_args.schem_positions.everness_japanese_shrine or {}
+                    shared_args.schem_positions.everness_japanese_shrine = shared_args.schem_positions
+                        .everness_japanese_shrine or {}
 
                     table.insert(shared_args.schem_positions.everness_japanese_shrine, {
                         pos = schem_pos,

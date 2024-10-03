@@ -45,7 +45,7 @@ minetest.register_on_generated(function(minp, maxp, blockseed)
     -- read/write to `data` what will be eventually saved (set_data)
     -- used for voxelmanip `data` manipulation
     for _, def in ipairs(Everness.on_generated_queue) do
-        if def.can_run(biomemap) and def.on_data then
+        if biomemap and def.can_run(biomemap) and def.on_data then
             shared_args[def.name] = shared_args[def.name] or {}
             def.on_data(minp, maxp, area, data, p2data, gennotify, rand, shared_args[def.name])
         end

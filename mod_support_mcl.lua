@@ -288,6 +288,8 @@ mcl_stairs.register_stair_and_slab(
     nil
 )
 
+
+
 mcl_stairs.register_stair_and_slab(
     'coral_bones_brick',
     'everness:coral_bones_brick',
@@ -1124,8 +1126,8 @@ mcl_doors:register_door('everness:door_bamboo', {
     description = S('Bamboo Door'),
     inventory_image = 'everness_door_bamboo_item.png',
     groups = { handy = 1, axey = 1, material_wood = 1, flammable = -1 },
-    tiles_bottom = 'everness_mcl_doors_door_bamboo_lower.png',
-    tiles_top = 'everness_mcl_doors_door_bamboo_upper.png',
+    tiles_bottom =  {'everness_mcl_doors_door_bamboo_lower.png','everness_mcl_doors_door_bamboo_lower.png'},
+    tiles_top = {'everness_mcl_doors_door_bamboo_upper.png','everness_mcl_doors_door_bamboo_upper.png'},
     sounds = Everness.node_sound_bamboo_defaults({
         dug = { name = 'everness_bamboo_hit', gain = 1.25 }
     }),
@@ -1171,8 +1173,8 @@ mcl_doors:register_door('everness:door_bone_pyrite', {
     description = S('Bone Pyrit Door'),
     inventory_image = 'everness_door_bone_pyrite_item.png',
     groups = { handy = 1, axey = 1, material_wood = 1, flammable = -1 },
-    tiles_bottom = 'everness_mcl_doors_door_bone_pyrite_lower.png',
-    tiles_top = 'everness_mcl_doors_door_bone_pyrite_upper.png',
+    tiles_bottom = {'everness_mcl_doors_door_bone_pyrite_lower.png','everness_mcl_doors_door_bone_pyrite_lower.png'},
+    tiles_top = {'everness_mcl_doors_door_bone_pyrite_upper.png','everness_mcl_doors_door_bone_pyrite_upper.png'},
     sounds = Everness.node_sound_wood_defaults(),
     _mcl_hardness = 3,
     _mcl_blast_resistance = 3,
@@ -1191,8 +1193,8 @@ mcl_doors:register_door('everness:door_willow', {
     description = S('Willow Door'),
     inventory_image = 'everness_door_willow_item.png',
     groups = { handy = 1, axey = 1, material_wood = 1, flammable = -1 },
-    tiles_bottom = 'everness_mcl_doors_door_willow_lower.png',
-    tiles_top = 'everness_mcl_doors_door_willow_upper.png',
+    tiles_bottom = {'everness_mcl_doors_door_willow_lower.png','everness_mcl_doors_door_willow_lower.png'},
+    tiles_top = {'everness_mcl_doors_door_willow_upper.png','everness_mcl_doors_door_willow_upper.png',},
     sounds = Everness.node_sound_wood_defaults(),
     _mcl_hardness = 3,
     _mcl_blast_resistance = 3,
@@ -1211,8 +1213,8 @@ mcl_doors:register_door('everness:door_crystal_wood', {
     description = S('Crystal Wood Door'),
     inventory_image = 'everness_door_crystal_wood_item.png',
     groups = { handy = 1, axey = 1, material_wood = 1, flammable = -1 },
-    tiles_bottom = 'everness_mcl_doors_door_crystal_wood_lower.png',
-    tiles_top = 'everness_mcl_doors_door_crystal_wood_upper.png',
+    tiles_bottom = {'everness_mcl_doors_door_crystal_wood_lower.png','everness_mcl_doors_door_crystal_wood_lower.png',},
+    tiles_top = {'everness_mcl_doors_door_crystal_wood_upper.png','everness_mcl_doors_door_crystal_wood_upper.png',},
     sounds = Everness.node_sound_glass_defaults(),
     sound_open = 'everness_door_glass_open',
     sound_close = 'everness_door_glass_close',
@@ -1254,8 +1256,8 @@ mcl_doors:register_door('everness:door_cursed_wood', {
     description = S('Cursed Wood Door'),
     inventory_image = 'everness_door_cursed_wood_item.png',
     groups = { handy = 1, axey = 1, material_wood = 1, flammable = -1 },
-    tiles_bottom = 'everness_mcl_doors_door_cursed_wood_lower.png',
-    tiles_top = 'everness_mcl_doors_door_cursed_wood_upper.png',
+    tiles_bottom = {'everness_mcl_doors_door_cursed_wood_lower.png','everness_mcl_doors_door_cursed_wood_lower.png'},
+    tiles_top = {'everness_mcl_doors_door_cursed_wood_upper.png','everness_mcl_doors_door_cursed_wood_upper.png'},
     sounds = Everness.node_sound_wood_defaults(),
     sound_open = 'everness_creaky_door_open',
     sound_close = 'everness_creaky_door_close',

@@ -62,7 +62,7 @@ minetest.register_on_generated(function(minp, maxp, blockseed)
     -- used for `place_schematic_on_vmanip` which will invalidate `data`
     -- therefore we are doing it after we set the data
     for _, def in ipairs(Everness.on_generated_queue) do
-        if def.can_run(biomemap) and def.after_set_data then
+        if biomemap and def.can_run(biomemap) and def.after_set_data then
             shared_args[def.name] = shared_args[def.name] or {}
             def.after_set_data(minp, maxp, vm, area, data, p2data, gennotify, rand, shared_args[def.name])
         end

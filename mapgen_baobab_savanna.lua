@@ -204,7 +204,7 @@ end
 Everness:add_to_queue_on_generated({
     name = 'everness:baobab_savanna',
     can_run = function(biomemap)
-        return table.indexof(biomemap, biome_id_baobab_savanna) ~= -1
+        return biomemap and table.indexof(biomemap, biome_id_baobab_savanna) ~= -1
     end,
     after_set_data = function(minp, maxp, vm, area, data, p2data, gennotify, rand, shared_args)
         local sidelength = maxp.x - minp.x + 1
